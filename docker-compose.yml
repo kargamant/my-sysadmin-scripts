@@ -1,0 +1,12 @@
+services:
+  my-script:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-script:latest
+    working_dir: /data
+    volumes:
+      - monitor-data:/data
+
+volumes:
+  monitor-data:
